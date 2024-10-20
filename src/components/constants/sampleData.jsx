@@ -68,3 +68,24 @@
         _id:'3',
     }
     ]
+
+
+    export const sampleMessage=[{
+        attachments:[
+            {
+                public_id:'askdakda',
+                url:'https://www.w3schools.com/howto/img_avatar.png'
+
+            }
+        ],
+
+        content:'Hi Nice to Meet you',
+        _id:'akjsdkadkajd',
+        sender:{
+            _id:'user._id',
+            name:'Shreshth'
+        },
+        chat:'chatId',
+        createAt:
+'2024-10-19T18:03:29.252Z'
+    }]

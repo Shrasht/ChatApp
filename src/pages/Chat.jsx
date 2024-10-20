@@ -3,9 +3,16 @@ import AppLayout from '../components/styles/layout/AppLayout'
 import { IconButton,Stack } from '@mui/material';
 import { AttachFile, Send } from '@mui/icons-material';
 import { InputBox } from '../components/styles/StyledComponents';
+import MessageComponent from '../components/shared/MessageComponent';
+import { sampleMessage } from '../components/constants/sampleData';
+import FileMenu from '../components/dialogs/FileMenu';
 const Chat = () => {
   const containerRef=useRef(null);
 
+  const user={
+   _id:'akjsdkadkajd',
+   name:'Shreshth'
+  }
   return (
     <>
       <Stack
@@ -20,7 +27,12 @@ const Chat = () => {
         }}>
 
 
-        </Stack> 
+      
+
+        {sampleMessage.map((i)=>(
+        <MessageComponent key={i._id} message={i} user={user}/>
+        ))}
+          </Stack> 
 
 
         <form style={{
@@ -39,6 +51,7 @@ const Chat = () => {
         </Stack>
 
         </form>
+        <FileMenu/>
     </>
   )
 }
